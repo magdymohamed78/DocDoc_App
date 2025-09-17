@@ -1,5 +1,6 @@
+import 'package:doc_doc_app/core/router/app_route.dart';
+import 'package:doc_doc_app/core/router/routes.dart';
 import 'package:doc_doc_app/core/style/app_themes.dart';
-import 'package:doc_doc_app/features/splash/ui/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class DocDocApp extends StatelessWidget {
@@ -7,17 +8,16 @@ class DocDocApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-  theme: AppThemes.lightTheme,
-    
-      
+      theme: AppThemes.lightTheme,
+
+      onGenerateRoute: AppRoute().onGenerateRoute,
+      initialRoute: Routes.splash,
     );
   }
 }
 
-
-void main (){
-
+void main() {
   runApp(DocDocApp());
 }

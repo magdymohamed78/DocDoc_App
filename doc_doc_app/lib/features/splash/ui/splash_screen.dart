@@ -13,29 +13,23 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 3)).then (( value ) {
- Navigator.pushNamed(context , Routes.onBoarding); }
-    );
+    Future.delayed(const Duration(seconds: 3)).then((value) {
+      Navigator.pushReplacementNamed(context, Routes.onBoarding);
+    });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: 
-         Center(
-           child: Stack( alignment: AlignmentGeometry.center,
-             children: [
-                   
+      body: Center(
+        child: Stack(
+          alignment: AlignmentGeometry.center,
+          children: [
             SvgPicture.asset('assets/svgs/Group.svg'),
             SvgPicture.asset('assets/svgs/Logo.svg'),
-                   
-            
-                   ],
-            
-                   
-                   
-                   ),
-         ),
-      
+          ],
+        ),
+      ),
     );
   }
 }
