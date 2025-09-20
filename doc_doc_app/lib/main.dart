@@ -1,3 +1,4 @@
+import 'package:doc_doc_app/core/networking/dio_factory.dart';
 import 'package:doc_doc_app/core/router/app_route.dart';
 import 'package:doc_doc_app/core/router/routes.dart';
 import 'package:doc_doc_app/core/style/app_themes.dart';
@@ -19,5 +20,6 @@ class DocDocApp extends StatelessWidget {
 }
 
 void main() {
+  DioFactory.init();
   runApp(DocDocApp());
 }
